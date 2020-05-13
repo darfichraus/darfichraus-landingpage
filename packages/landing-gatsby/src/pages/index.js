@@ -1,25 +1,26 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'common/src/theme/appclassic';
+import { Modal } from '@redq/reuse-modal';
+import { theme } from 'common/src/theme/appModern';
 import { ResetCSS } from 'common/src/assets/css/style';
 import Sticky from 'react-stickynode';
-import Navbar from '../containers/AppClassic/Navbar';
-import Banner from '../containers/AppClassic/Banner';
-import Customer from '../containers/AppClassic/Customer';
-import KeyFeatures from '../containers/AppClassic/KeyFeatures';
-import AppSlider from '../containers/AppClassic/AppSlider';
-import Features from '../containers/AppClassic/Features';
-import DesignedAndBuilt from '../containers/AppClassic/DesignedAndBuilt';
-import FeatureTab from '../containers/AppClassic/FeatureTab';
-import PricingPolicy from '../containers/AppClassic/PricingPolicy';
-import Testimonial from '../containers/AppClassic/Testimonial';
-import Faq from '../containers/AppClassic/Faq';
-import JoinTrail from '../containers/AppClassic/JoinTrail';
-import Footer from '../containers/AppClassic/Footer';
+import Navbar from '../containers/AppModern/Navbar';
+import Banner from '../containers/AppModern/Banner';
+import AppSlider from '../containers/AppModern/AppSlider';
+import Features from '../containers/AppModern/Features';
+import DashboardFeatures from '../containers/AppModern/Dashboard';
+import ProductSlide from '../containers/AppModern/ProductSlide';
+import DesignedAndBuilt from '../containers/AppModern/DesignedAndBuilt';
+import PricingPolicy from '../containers/AppModern/PricingPolicy';
+import TeamPortfolio from '../containers/AppModern/TeamPortfoilo';
+import Testimonial from '../containers/AppModern/Testimonial';
+import Newsletter from '../containers/AppModern/Newsletter';
+import Footer from '../containers/AppModern/Footer';
 import GlobalStyle, {
   AppWrapper,
   ContentWrapper,
-} from '../containers/AppClassic/appClassic.style';
+} from '../containers/AppModern/appModern.style';
+import '@redq/reuse-modal/es/index.css';
 
 import SEO from '../components/seo';
 
@@ -27,7 +28,8 @@ export default function() {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <SEO title="Darf ich raus?" />
+        <SEO title="App Modern" />
+        <Modal />
         <ResetCSS />
         <GlobalStyle />
 
@@ -37,16 +39,15 @@ export default function() {
           </Sticky>
           <ContentWrapper>
             <Banner />
-            <Customer />
-            <KeyFeatures />
-            <AppSlider />
             <Features />
-            <DesignedAndBuilt />
-            <FeatureTab />
-            <PricingPolicy />
+            <AppSlider />
+            <DashboardFeatures />
             <Testimonial />
-            <Faq />
-            <JoinTrail />
+            <ProductSlide />
+            <DesignedAndBuilt />
+            <PricingPolicy />
+            <TeamPortfolio />
+            <Newsletter />
           </ContentWrapper>
           <Footer />
         </AppWrapper>

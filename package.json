@@ -62,6 +62,8 @@
     ]
   },
   "dependencies": {
-    "polished": "^3.4.4"
+    "polished": "^3.4.4",
+    "react-id-swiper": "^3.0.0",
+    "swiper": "^5.3.8"
   }
 }
