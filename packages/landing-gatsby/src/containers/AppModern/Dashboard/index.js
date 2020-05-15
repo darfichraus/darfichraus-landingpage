@@ -24,7 +24,7 @@ const DashboardSection = ({
 }) => {
   const ButtonGroup = () => (
     <Fragment>
-      <Button title="FREE TRAIL" {...btnStyle} />
+      <Button title="Zur Web App" {...btnStyle} />
     </Fragment>
   );
   return (
@@ -37,13 +37,13 @@ const DashboardSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Meet the dashboard features of our finalcial management."
+                  content="Die 'Darf ich raus' Web App"
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="We help to create SaaS product that are innovative, differentiated with a superb User Experience, fully accessible through mobile devices. SaaS products are changing the world ."
+                  content="Für größere Displays optimiert und mit zusätzlichen Information augestattet. Besuchen Sie jetzt die Desktop-version von 'Darf ich raus'!"
                   {...description}
                 />
               }

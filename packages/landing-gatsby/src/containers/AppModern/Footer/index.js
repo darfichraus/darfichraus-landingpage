@@ -70,7 +70,7 @@ const Footer = () => {
               </MenuItem>
             ))}
           </Menu>
-          <CopyrightText>Copyright {year} By RedQ Inc</CopyrightText>
+          <CopyrightText>Copyright {year} darfichraus.de</CopyrightText>
         </MenuArea>
         {/* End of footer menu area */}
       </Container>

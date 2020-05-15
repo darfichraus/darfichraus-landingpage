@@ -416,7 +416,7 @@ export const testimonial = {
   reviews: [
     {
       id: 1,
-      title: 'Modern look & trending design',
+      title: 'Ist "Darf ich raus" eine seriöse Quelle?',
       description:
         'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
       avatar:
@@ -427,13 +427,10 @@ export const testimonial = {
     },
     {
       id: 2,
-      title: 'User friendly & Customizable',
+      title: 'Wie aktuell sind die Informationen auf "Darf ich raus"?',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore features Lorem ipsum dolor sit amet consectetur adipisicing.',
       avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-      name: 'Jeny Doe',
-      designation: 'Co Founder of RedQ Inc.',
-      review: 5,
     },
     {
       id: 3,

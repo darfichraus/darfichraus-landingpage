@@ -37,9 +37,9 @@ const Testimonial = () => {
   const glideOptions = {
     type: 'carousel',
     gap: 0,
-    autoplay: 5000,
-    perView: 2,
-    animationDuration: 700,
+    autoplay: 10000,
+    perView: 3,
+    animationDuration: 1000,
     breakpoints: {
       991: {
         perView: 1,
@@ -82,18 +82,7 @@ const Testimonial = () => {
                     <div className="review-card">
                       <Heading as="h3" content={item.title} />
                       <Text content={item.description} />
-                      <div className="card-footer">
-                        <div className="image">
-                          <Image src={item.avatar} alt="Client Image" />
-                        </div>
-                        <div className="reviewer-info">
-                          <div className="content">
-                            <Heading as="h4" content={item.name} />
-                            <Text content={item.designation} />
-                          </div>
-                          <Rating rating={item.review} />
-                        </div>
-                      </div>
+                      
                     </div>
                   </GlideSlide>
                 ))}

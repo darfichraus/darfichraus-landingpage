@@ -42,10 +42,8 @@ export default function() {
             <Features />
             <AppSlider />
             <DashboardFeatures />
-            <Testimonial />
-            <ProductSlide />
             <DesignedAndBuilt />
-            <PricingPolicy />
+            <Testimonial />
             <TeamPortfolio />
             <Newsletter />
           </ContentWrapper>
