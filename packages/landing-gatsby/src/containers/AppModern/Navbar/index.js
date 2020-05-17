@@ -122,26 +122,10 @@ const Navbar = () => {
           <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
           {/* end of main menu */}
 
-          <Search className="search" ref={searchRef}>
-            <form onSubmit={handleSearchForm}>
-              <input
-                type="text"
-                value={state.search}
-                placeholder="Enter your keyword"
-                onChange={handleOnChange}
-              />
-            </form>
-            <Button
-              className="text"
-              variant="textButton"
-              icon={<Icon icon={state.searchToggle ? x : search} />}
-              onClick={() => toggleHandler('search')}
-            />
-          </Search>
           {/* end of search */}
 
-          <AnchorLink href="#trail" offset={84}>
-            <Button className="trail" title="Zur Web App" />
+          <AnchorLink offset={84}>
+            <Button className="trail" title="Zur Web App"/>
           </AnchorLink>
 
           <Button
@@ -183,7 +167,6 @@ const Navbar = () => {
               </li>
             ))}
           </Scrollspy>
-          <Button title="Try for Free" />
         </Container>
       </MobileMenu>
       {/* end of mobile menu */}

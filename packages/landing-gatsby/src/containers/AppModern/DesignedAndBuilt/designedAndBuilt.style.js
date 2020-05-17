@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 
 const SectionWrapper = styled.div`
-  padding: 75px 0 25px;
+  padding: 175px 0 25px;
   overflow: hidden;
   @media (max-width: 1600px) {
-    padding: 25px 0 0px;
+    padding: 225px 0 0px;
   }
   @media only screen and (max-width: 1366px) {
-    padding: 30px 0;
+    padding: 130px 0;
   }
   @media only screen and (max-width: 667px) {
     padding: 30px 0 0;

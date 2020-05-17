@@ -109,6 +109,18 @@ export const ContactFormWrapper = styled.div`
       box-shadow: #1e2a4a 0px 12px 24px -10px;
     }
   }
+  img {
+    display: inline-block;
+    height: 41px;
+    width: auto;
+    margin-bottom: 27px;
+    @media only screen and (max-width: 1366px) {
+      height: 35px;
+    }
+    @media only screen and (max-width: 1366px) {
+      margin-bottom: 20px;
+    }
+  }
 `;
 
 export default NewsletterWrapper;

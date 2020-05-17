@@ -67,7 +67,6 @@ const TeamPortfoiloSection = () => {
           <div className="content">
             <Heading content={title} />
             <Text content={description} />
-            <Button title="Learn More" />
           </div>
         </ContentWrapper>
       </Container>

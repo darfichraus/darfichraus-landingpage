@@ -10,20 +10,20 @@
 			},
 			{
 				"id": 2,
-				"label": "Über",
+				"label": "Mission",
 				"path": "#features",
 				"offset": "81"
 			},
 			{
 				"id": 3,
 				"label": "Features",
-				"path": "#testimonial",
+				"path": "#app-screens",
 				"offset": "81"
 			},
 			{
 				"id": 4,
 				"label": "Fragen",
-				"path": "#pricing",
+				"path": "#questions",
 				"offset": "81"
 			},
 			{
@@ -50,11 +50,6 @@
 			"id": 3,
 			"image": "../../assets/image/appModern/company3.png",
 			"title": "evernote"
-		},
-		{
-			"id": 4,
-			"image": "../../assets/image/appModern/company4.png",
-			"title": "the verge"
 		}
 	],
 
@@ -110,30 +105,30 @@
 		"features": [
 			{
 				"id": 1,
-				"icon": "../../assets/image/appModern/icon1.svg",
+				"icon": "../../assets/image/appModern/icon5.svg",
 				"title": "Übersichtlich",
-				"description": "..."
+				"description": "Alles auf einem Blick. Von Corona bis Hochwasser sind erwähnenswerte Meldungen verfügbar."
 			},
 			{
 				"id": 2,
-				"icon": "../../assets/image/appModern/icon1.svg",
+				"icon": "../../assets/image/appModern/icon6.svg",
 				"title": "Simples Design",
-				"description": "..."
+				"description": "Mit wenigen Klicks durch unsere modern gestaltete App navigieren."
 			},
 			{
 				"id": 3,
-				"icon": "../../assets/image/appModern/icon1.svg",
-				"title": "asdf",
-				"description": "..."
+				"icon": "../../assets/image/appModern/icon7.svg",
+				"title": "Standortbasiert",
+				"description": "Die Meldungen für mehrere Bundesländer erhalten."
 			}
 		]
 	},
 
 	"designAndBuilt": {
-		"image": "../../assets/image/appModern/code.png",
-		"slogan": "CODE INTEGRATION",
-		"title": "Introducing coding features of our apps with Customization",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore features that Lorem ipsum dolor sit amet consectetur."
+		"image": "../../assets/image/appModern/code.svg",
+		"slogan": "BALD VERFÜGBAR",
+		"title": "API-Zugang für öffentliche Institutionen und Behörden",
+		"description": "Einrichtungen aus der öffentlichen Verwaltung können einen kostenlosen Lesezugriff auf die gesammelten Daten und Meldungen beantragen. Die Anbindung unserer API ist leicht und verständlich, und ermöglicht auch fernab von 'Darf ich raus' die Einbindung in externe Applikationen und Webseiten."
 	},
 
 	"productData": {
@@ -313,40 +308,25 @@
 			},
 			{
 				"id": 7,
-				"img": "../../assets/image/appModern/3.png",
+				"img": "../../assets/image/appModern/7.png",
 				"text": "Stefan"
 			},
 			{
 				"id": 4,
 				"img": "../../assets/image/appModern/4.png",
 				"text": "Benedikt"
-			},
-			{
-				"id": 5,
-				"img": "../../assets/image/appModern/5.png",
-				"text": "..."
-			},
-			{
-				"id": 6,
-				"img": "../../assets/image/appModern/6.png",
-				"text": "..."
-			},
-			{
-				"id": 9,
-				"img": "../../assets/image/appModern/7.png",
-				"text": "Stefan"
 			}
 		]
 	},
 
 	"testimonial": {
-		"slogan": "TESTIMONIAL",
-		"title": "Meet Client Satisfaction by using product",
+		"slogan": "FAQ",
+		"title": "Häufige Fragen",
 		"reviews": [
 			{
 				"id": 1,
 				"title": "Ist 'Darf ich raus' eine seriöse Quelle?",
-				"description": "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+				"description": "Sämtliche Informationen werden vor veröffentlichung nicht automatisiert geprüft, sondern individuell von Menschenhand. So wird die Richtigkeit der Informationen gewährleistet.",
 				"avatar": "https://pbs.twimg.com/profile_images/974736784906248192/gPZwCbdS.jpg",
 				"name": "Jon Doe",
 				"designation": "CEO of RedQ Inc.",
@@ -354,8 +334,8 @@
 			},
 			{
 				"id": 2,
-				"title": "User friendly & Customizable",
-				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore features Lorem ipsum dolor sit amet consectetur adipisicing.",
+				"title": "Wie aktuell sind die Informationen?",
+				"description": "Täglich werden unsere Feeds aktualisiert.",
 				"avatar": "https://randomuser.me/api/portraits/women/44.jpg",
 				"name": "Jeny Doe",
 				"designation": "Co Founder of RedQ Inc.",
@@ -363,8 +343,8 @@
 			},
 			{
 				"id": 3,
-				"title": "User friendly & Customizable",
-				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore features Lorem ipsum dolor sit amet consectetur adipisicing.",
+				"title": "Wo kann ich mich bei Fragen melden?",
+				"description": "Gerne können Sie uns per Mail unter info@darfichraus.de kontaktieren. Auf Social Media Kanälen wie Instagram und Twitter können Sie und auch finden.",
 				"avatar": "https://tinyfac.es/data/avatars/475605E3-69C5-4D2B-8727-61B7BB8C4699-500w.jpeg",
 				"name": "Jon Doe",
 				"designation": "Co Founder of RedQ Inc.",
@@ -378,20 +358,14 @@
 			{
 				"id": 1,
 				"icon": "../../assets/image/appModern/chat.svg",
-				"title": "Join the Community",
-				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore."
-			},
-			{
-				"id": 2,
-				"icon": "../../assets/image/appModern/group.svg",
-				"title": "Join in Chat Community",
-				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore."
+				"title": "Interesse am Projekt?",
+				"description": "Wir freuen uns über weitere Unterstützung und mögliche Kooperationen. Kontaktieren Sie uns hierfür einfach."
 			},
 			{
 				"id": 3,
 				"icon": "../../assets/image/appModern/github.svg",
-				"title": "Github Access",
-				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore."
+				"title": "Github",
+				"description": "Unser Github-Repository ist hier zu finden: https://github.com/darfichraus-de/frontend"
 			}
 		],
 		"logo": "../../assets/image/appModern/logo-white.svg",

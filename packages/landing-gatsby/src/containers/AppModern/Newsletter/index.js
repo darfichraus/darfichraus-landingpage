@@ -6,6 +6,7 @@ import Heading from 'common/src/components/Heading';
 import Button from 'common/src/components/Button';
 import Input from 'common/src/components/Input';
 import Container from 'common/src/components/UI/Container';
+import Image from 'common/src/components/Image';
 
 import NewsletterWrapper, { ContactFormWrapper } from './newsletter.style';
 
@@ -22,24 +23,27 @@ const Newsletter = ({
       <NewsletterWrapper>
         <Container>
           <Box {...textArea}>
-            <Heading content="Subscribe our newsletter" {...title} />
+            <Heading content="Kontakt" {...title} />
             <Text
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore"
+              content="Bei Fragen können Sie uns eine Email schreiben oder einen unsere Social Media Kanälen kontaktieren."
               {...description}
             />
           </Box>
           <Box {...buttonArea}>
             <ContactFormWrapper>
-              <Input
-                inputType="email"
-                label="Email address"
-                iconPosition="right"
-                isMaterial={true}
-                className="email_input"
-              />
               <Button {...buttonStyle} title="Get access" />
             </ContactFormWrapper>
+            <Box>
+              <Image src="common/src/assets/image/appModern/icon1.svg" alt="mail" />
+            </Box>
+            <Box>
+              <Image src="common/src/assets/image/appModern/icon1.svg" alt="twitter" />
+            </Box>
+            <Box>
+              <Image src="common/src/assets/image/appModern/icon1.svg" alt="instagram" />
+            </Box>
           </Box>
+          <Box></Box>
         </Container>
       </NewsletterWrapper>
     </Box>

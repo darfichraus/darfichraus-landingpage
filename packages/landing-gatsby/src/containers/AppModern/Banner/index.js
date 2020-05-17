@@ -85,12 +85,7 @@ const Banner = () => {
     <BannerWrapper id="home">
       <Container>
         <BannerContent>
-          <Fade up>
-            <RatingInfo>
-              <Rating rating={4} />
-              4.9 of 5 By <img src={microsoft} alt="Microsoft" />
-            </RatingInfo>
-          </Fade>
+          
           <Fade up delay={100}>
             <Heading
               as="h1"
@@ -114,18 +109,7 @@ const Banner = () => {
               />
             </ButtonGroup>
           </Fade>
-          <VideoGroup>
-            <img
-              src={videoBanner1}
-              onClick={handleVideoModal}
-              alt="Microsoft"
-            />
-            <img
-              src={videoBanner2}
-              onClick={handleVideoModal}
-              alt="Microsoft"
-            />
-          </VideoGroup>
+          
         </BannerContent>
         <BannerImage>
           <Fade up delay={100}>

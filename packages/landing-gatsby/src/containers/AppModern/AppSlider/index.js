@@ -52,7 +52,7 @@ const AppSlider = () => {
   };
 
   return (
-    <SectionWrapper>
+    <SectionWrapper id="app-screens">
       <Container>
         <CarouseWrapper>
           <GlideCarousel

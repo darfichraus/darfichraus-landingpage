@@ -19,16 +19,16 @@ export const FeatureWrapper = styled.div`
   margin: -12px 0 -30px;
 
   > div {
-    width: calc(100% / 4 - 34px);
+    width: calc(100% / 3 - 34px);
     margin: 38px 0 30px;
     @media only screen and (max-width: 1366px) {
-      width: calc(100% / 4 - 30px);
+      width: calc(100% / 3 - 30px);
     }
     @media only screen and (max-width: 991px) {
-      width: calc(100% / 2 - 30px);
+      width: calc(100% / 1 - 30px);
     }
     @media only screen and (max-width: 767px) {
-      width: calc(100% / 2 - 15px);
+      width: calc(100% / 1 - 15px);
     }
     @media only screen and (max-width: 480px) {
       width: 100%;

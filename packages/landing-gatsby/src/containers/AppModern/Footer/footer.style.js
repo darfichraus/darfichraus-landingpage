@@ -28,7 +28,7 @@ export const WidgetArea = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   .col {
-    width: calc(100% / 3);
+    width: calc(100% / 2);
     text-align: center;
     padding: 0 21px;
     margin-bottom: 50px;
