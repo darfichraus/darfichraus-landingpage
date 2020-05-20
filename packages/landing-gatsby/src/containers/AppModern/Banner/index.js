@@ -11,6 +11,8 @@ import Button from 'common/src/components/Button';
 import Heading from 'common/src/components/Heading';
 import Rating from 'common/src/components/Rating';
 import Container from 'common/src/components/UI/Container';
+import { Link } from 'gatsby'
+
 import BannerWrapper, {
   BannerContent,
   RatingInfo,
@@ -99,7 +101,7 @@ const Banner = () => {
           </Fade>
           <Fade up delay={300}>
             <ButtonGroup>
-              <Button className="primary" title="Zur Web App" />
+              <Button className="primary" title="Zur Web App"/>
               <Button
                 className="text"
                 variant="textButton"

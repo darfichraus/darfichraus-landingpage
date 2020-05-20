@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ButtonStyle from './button.style';
 import Loader from '../Loader';
+import { Link } from 'gatsby'
 
 const Button = ({
   type,
@@ -58,6 +59,7 @@ const Button = ({
       onClick={onClick}
       {...props}
     >
+      
       {position === 'left' && buttonIcon}
       {title && <span className="btn-text">{title}</span>}
       {position === 'right' && buttonIcon}
