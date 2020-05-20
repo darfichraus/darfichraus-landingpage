@@ -370,26 +370,18 @@
 		],
 		"logo": "../../assets/image/appModern/logo-white.svg",
 		"menu": [
-			{
-				"id": 1,
-				"text": "Home",
-				"link": "./impressum"
-			},
+
 			{
 				"id": 2,
 				"text": "Datenschutz",
-				"link": "#"
+				"link": "/datenschutz"
 			},
 			{
 				"id": 3,
 				"text": "Impressum",
-				"link": "#"
-			},
-			{
-				"id": 4,
-				"text": "Kontakt",
-				"link": "#"
+				"link": "/impressum"
 			}
+
 		]
 	}
 }

@@ -7,6 +7,7 @@ import { Link } from 'gatsby'
 const Button = ({
   type,
   title,
+  myLink,
   icon,
   disabled,
   iconPosition,
@@ -61,7 +62,7 @@ const Button = ({
     >
       
       {position === 'left' && buttonIcon}
-      {title && <span className="btn-text">{title}</span>}
+  {title && <span className="btn-text" style={{'text-decoration': 'none'}}><a style={{'text-decoration': 'none'}} href={myLink}>{title}</a></span>}
       {position === 'right' && buttonIcon}
     </ButtonStyle>
   );

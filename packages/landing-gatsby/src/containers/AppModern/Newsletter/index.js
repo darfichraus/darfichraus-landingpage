@@ -31,17 +31,9 @@ const Newsletter = ({
           </Box>
           <Box {...buttonArea}>
             <ContactFormWrapper>
-              <Button {...buttonStyle} title="Get access" />
+              <Button {...buttonStyle} title="Email" myLink="mailto:DarfIchRaus%20Team<info@dafichraus.de>" />
             </ContactFormWrapper>
-            <Box>
-              <Image src="common/src/assets/image/appModern/icon1.svg" alt="mail" />
-            </Box>
-            <Box>
-              <Image src="common/src/assets/image/appModern/icon1.svg" alt="twitter" />
-            </Box>
-            <Box>
-              <Image src="common/src/assets/image/appModern/icon1.svg" alt="instagram" />
-            </Box>
+           
           </Box>
           <Box></Box>
         </Container>

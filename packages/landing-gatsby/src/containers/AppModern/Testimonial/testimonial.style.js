@@ -132,7 +132,7 @@ export const CarouselWrapper = styled.div`
         }
       }
       .star {
-        color: ${themeGet('colors.yellowHover', '#F6C416')};
+        color: ${themeGet('colors.primary', '#F6C416')};
       }
       .star-o {
         color: ${themeGet('colors.gray', '#E4E4E4')};

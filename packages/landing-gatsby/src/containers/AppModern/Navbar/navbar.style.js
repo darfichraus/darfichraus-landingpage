@@ -130,7 +130,7 @@ export const MenuArea = styled.div`
     }
     &.trail {
       &:hover {
-        box-shadow: #d1397c 0px 12px 24px -10px;
+        box-shadow: ${themeGet('colors.primary', '#a0a0a0')} 0px 12px 24px -10px;
       }
       @media only screen and (max-width: 991px) {
         display: none;

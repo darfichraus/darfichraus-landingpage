@@ -28,13 +28,33 @@ const ButtonStyle = styled.button`
   span.btn-text {
     padding-left: ${themeGet('space.1', '4')}px;
     padding-right: ${themeGet('space.1', '4')}px;
+    a:link {
+      text-decoration: none;
+    }
+    
+    a:visited {
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: none;
+    }
+    
+    a:active {
+      text-decoration: none;
+    }
   }
   span.btn-icon {
     display: flex;
     > div {
       display: flex !important;
     }
+
   }
+
+
+
+
 
   &:focus {
     outline: none;

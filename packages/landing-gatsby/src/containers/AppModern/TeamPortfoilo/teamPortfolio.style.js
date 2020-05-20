@@ -131,7 +131,7 @@ export const ContentWrapper = styled.div`
         padding: 20px;
         top: -59px;
         left: 34px;
-        background-color: rgb(209, 57, 124);
+        background-color: ${themeGet('colors.primary', '#a0a0a0')};
         box-shadow: 0px 16px 57px 0px rgba(57, 81, 111, 0.1);
         border-radius: 28px 28px 28px 0;
         width: 122%;
@@ -155,7 +155,7 @@ export const ContentWrapper = styled.div`
           height: 0;
           border-style: solid;
           border-width: 22px 19px 0 0;
-          border-color: rgb(209, 57, 124) transparent transparent transparent;
+          border-color: ${themeGet('colors.primary', '#a0a0a0')} transparent transparent transparent;
           position: absolute;
           bottom: -22px;
           left: 0;
@@ -231,7 +231,7 @@ export const ContentWrapper = styled.div`
     border-radius: 5px;
 
     &:hover {
-      box-shadow: #d1397c 0px 12px 24px -10px;
+      box-shadow: ${themeGet('colors.primary', '#a0a0a0')} 0px 12px 24px -10px;
     }
   }
 `;

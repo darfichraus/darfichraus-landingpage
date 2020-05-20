@@ -59,7 +59,7 @@ export const FeatureWrapper = styled.div`
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        color: var(--color);
+        color: var(--primary);
         transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
         &.plus {
           top: 0;

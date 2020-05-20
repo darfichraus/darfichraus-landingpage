@@ -71,7 +71,7 @@ export const CarouseWrapper = styled.div`
         transition: height 0.3s ease;
         &.glide__bullet--active {
           height: 35px;
-          background-color: #d1397c;
+          background-color: ${themeGet('colors.primary', '#a0a0a0')};
         }
       }
     }
