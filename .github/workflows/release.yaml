@@ -15,20 +15,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '13.x'
       - name: Docker Login
         run: echo ${{secrets.DOCKER_PASSWORD}} | docker login -u ${{secrets.DOCKER_USERNAME}} --password-stdin
       - name: Build Docker image
-        run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} ./packages/landing/Dockerfile .
+        run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} ./packages/landing/Dockerfile
       - name: Publish Docker image
         run: docker push ${REPO}:${GITHUB_RUN_ID} && docker push ${REPO}:${NAMESPACE}
   deploy:
