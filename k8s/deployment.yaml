@@ -32,7 +32,7 @@ spec:
   ports:
     - port: 80
       protocol: TCP
-      targetPort: 80
+      targetPort: 8000
   selector:
     app: landingpage
 ---
