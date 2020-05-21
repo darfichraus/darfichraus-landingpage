@@ -37,7 +37,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} ./packages/landing/Dockerfile .
       - name: Publish Docker image
-      run: docker push ${REPO}:${GITHUB_RUN_ID} && docker push ${REPO}:${NAMESPACE}
+        run: docker push ${REPO}:${GITHUB_RUN_ID} && docker push ${REPO}:${NAMESPACE}
   deploy:
     name: deploy to cluster
     needs: [docker]
