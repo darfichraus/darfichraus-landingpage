@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: '13.x'
       - name: Install Dependencies
-        run: yarn install
+        run: yarn
       - name: Build  App
         run: yarn gatsby-build
       - name: Docker Login
