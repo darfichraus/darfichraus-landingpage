@@ -95,11 +95,8 @@ const Banner = () => {
           </Fade>
           <Fade up delay={300}>
             <ButtonGroup>
-              <Button
-                className="primary"
-                title="Zur Web App"
-                myLink="https://app.crimsy.tech/"
-              />
+              <Button className="primary" title="Zur Web App" myLink="https://app.crimsy.tech"
+/>
               <Button
                 className="text"
                 variant="textButton"
