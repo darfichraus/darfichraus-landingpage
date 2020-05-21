@@ -1,9 +1,9 @@
 FROM mhart/alpine-node:11 AS builder
 COPY . /
+WORKDIR /app
 RUN apk add --no-cache python make g++
 RUN yarn install
 RUN yarn gatsby-build
-WORKDIR /app
 COPY packages/landing-gatsby /app
 
 FROM nginx:alpine
