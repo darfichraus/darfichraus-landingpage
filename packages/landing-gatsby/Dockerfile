@@ -1,4 +1,5 @@
 FROM mhart/alpine-node:11 AS builder
+COPY . /
 RUN yarn install
 RUN yarn gatsby-build
 WORKDIR /app
