@@ -32,16 +32,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '13.x'
-      - name: Install Dependencies
-        run: npm install
-      - name: Install Angular Cli
-        run: npm install -g @angular/cli
-      - name: Build Angular App
-        run: ng build
       - name: Docker Login
         run: echo ${{secrets.DOCKER_PASSWORD}} | docker login -u ${{secrets.DOCKER_USERNAME}} --password-stdin
       - name: Build Docker image
-        run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} .
+        run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} ./packages/landing/Dockerfile .
       - name: Publish Docker image
       run: docker push ${REPO}:${GITHUB_RUN_ID} && docker push ${REPO}:${NAMESPACE}
   deploy:
