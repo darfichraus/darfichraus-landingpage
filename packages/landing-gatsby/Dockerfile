@@ -1,5 +1,6 @@
 FROM mhart/alpine-node:11 AS builder
 COPY . /
+RUN apk add --no-cache python make g++
 RUN yarn install
 RUN yarn gatsby-build
 WORKDIR /app
