@@ -1,6 +1,8 @@
 FROM mhart/alpine-node:11 AS builder
 
 WORKDIR /app
+RUN yarn install
+RUN yarn gatsby-build
 COPY packages/landing-gatsby /app
 
 FROM nginx:alpine
