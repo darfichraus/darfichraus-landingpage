@@ -24,11 +24,7 @@ const DashboardSection = ({
 }) => {
   const ButtonGroup = () => (
     <Fragment>
-      <Button
-        title="Zur Web App"
-        {...btnStyle}
-        myLink="https://app.crimsy.tech/"
-      />
+      <Button title="Zur Web App"  {...btnStyle} myLink="https://app.crimsy.tech" />
     </Fragment>
   );
   return (

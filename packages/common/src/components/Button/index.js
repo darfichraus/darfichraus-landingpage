@@ -62,7 +62,8 @@ const Button = ({
     >
       
       {position === 'left' && buttonIcon}
-  {title && <span className="btn-text" style={{'text-decoration': 'none'}}><a style={{'text-decoration': 'none'}} href={myLink}>{title}</a></span>}
+      <a href={myLink}>{title}</a>
+  {title && <span className="btn-text"></span>}
       {position === 'right' && buttonIcon}
     </ButtonStyle>
   );

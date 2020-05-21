@@ -53,7 +53,9 @@ const ButtonStyle = styled.button`
   }
 
 
-
+  a {
+    text-decoration: none !important;
+  }
 
 
   &:focus {

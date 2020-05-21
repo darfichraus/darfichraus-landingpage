@@ -28,7 +28,7 @@ export default function() {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <SEO title="App Modern" />
+        <SEO title="Darf ich raus" />
         <Modal />
         <ResetCSS />
         <GlobalStyle />
