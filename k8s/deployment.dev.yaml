@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: landingpage
-          image: crimsy/landing
+          image: crimsy/landingpage:development
           imagePullPolicy: Always
       imagePullSecrets:
         - name: docker-hub-crimsy
@@ -51,9 +51,17 @@ spec:
   tls:
     - hosts:
         - crimsy.tech
+        - dev.crimsy.tech
       secretName: crimsy-tech-tls-root
   rules:
     - host: crimsy.tech
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: landingpage
+              servicePort: 80
+    - host: dev.crimsy.tech
       http:
         paths:
           - path: /

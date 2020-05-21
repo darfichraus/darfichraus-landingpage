@@ -24,7 +24,11 @@ const DashboardSection = ({
 }) => {
   const ButtonGroup = () => (
     <Fragment>
-      <Button title="Zur Web App"  {...btnStyle} myLink="https://dev.crimsy.tech" />
+      <Button
+        title="Zur Web App"
+        {...btnStyle}
+        myLink="https://app.crimsy.tech/"
+      />
     </Fragment>
   );
   return (
@@ -36,10 +40,7 @@ const DashboardSection = ({
             <Heading className="subtitle" as="h5" content="APP'S DASHBOARD" />
             <FeatureBlock
               title={
-                <Heading
-                  content="Die 'Darf ich raus' Web App"
-                  {...title}
-                />
+                <Heading content="Die 'Darf ich raus' Web App" {...title} />
               }
               description={
                 <Text
