@@ -1,0 +1,106 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: landingpage
+  namespace: production
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: landingpage
+  template:
+    metadata:
+      labels:
+        app: landingpage
+    spec:
+      containers:
+        - name: landingpage
+          image: crimsy/landingpage:production
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: docker-hub-crimsy
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: landingpage
+  namespace: production
+  labels:
+    app: landingpage
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: landingpage
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: landingpage
+  namespace: production
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  labels:
+    app: landingpage
+
+spec:
+  tls:
+    - hosts:
+        - darfichraus.com
+        - www.darfichraus.com
+      secretName: darfichraus-com-tls
+    - hosts:
+        - darfichraus.de
+        - www.darfichraus.de
+      secretName: darfichraus-de-tls
+    - hosts:
+        - darfichraus.de
+        - www.darfichraus.de
+        secretName: darfichraus-info-tls
+  rules:
+    - host: darfichraus.de
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: landingpage
+              servicePort: 80
+    - host: darfichraus.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: landingpage
+              servicePort: 80
+    - host: www.darfichraus.de
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: landingpage
+              servicePort: 80
+    - host: www.darfichraus.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: landingpage
+              servicePort: 80
+    - host: darfichraus.info
+      http:
+        paths:
+          - path: /api
+            backend:
+              serviceName: landingpage
+              servicePort: 80
+    - host: www.darfichraus.info
+      http:
+        paths:
+          - path: /api
+            backend:
+              serviceName: landingpage
+              servicePort: 80
