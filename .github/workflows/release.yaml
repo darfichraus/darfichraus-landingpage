@@ -16,13 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build Gatsby Site
-       uses: jzweifel/gatsby-cli-github-action@master
-       env:
+        uses: jzweifel/gatsby-cli-github-action@master
+        env:
           GATSBY_PROJECT_PATH: "./packages/landing-gatsby"
-       with:
+        with:
           gatsby-arg: build
       - name: Build Docker image
-      run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} -f ./packages/landing-gatsby/Dockerfile .
+        run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} -f ./packages/landing-gatsby/Dockerfile .
       - name: Build Docker image
         run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} -f ./packages/landing-gatsby/Dockerfile .
       - name: Publish Docker image
