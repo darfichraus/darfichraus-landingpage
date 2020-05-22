@@ -10,6 +10,10 @@ import Image from 'common/src/components/Image';
 
 import NewsletterWrapper, { ContactFormWrapper } from './newsletter.style';
 
+const openMail = () => {
+  window.location = 'mailto:DarfIchRaus%20Team<info@dafichraus.de>';
+};
+
 const Newsletter = ({
   sectionWrapper,
   textArea,
@@ -31,9 +35,8 @@ const Newsletter = ({
           </Box>
           <Box {...buttonArea}>
             <ContactFormWrapper>
-              <Button {...buttonStyle} title="Email" myLink="mailto:DarfIchRaus%20Team<info@dafichraus.de>" />
+              <Button {...buttonStyle} title="Email" onClick={openMail} />
             </ContactFormWrapper>
-           
           </Box>
           <Box></Box>
         </Container>

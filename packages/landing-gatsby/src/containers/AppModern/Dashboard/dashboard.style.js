@@ -8,7 +8,7 @@ const DashboardWrapper = styled.section`
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 100%;
+  min-height: 300px;
   position: relative;
   background-color: #fff;
   /* background-image: linear-gradient(

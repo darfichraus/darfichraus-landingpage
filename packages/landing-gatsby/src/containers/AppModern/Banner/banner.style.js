@@ -25,7 +25,7 @@ const BannerWrapper = styled.div`
     min-height: 100vh;
   }
   @media only screen and (max-width: 1099px) {
-    min-height: 100%;
+    min-height: 300px;
   }
   @media only screen and (max-width: 480px) {
     padding-top: 90px;
