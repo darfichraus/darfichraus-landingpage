@@ -62,7 +62,7 @@ const Button = ({
     >
       
       {position === 'left' && buttonIcon}
-      <a href={myLink}>{title}</a>
+      {title}
   {title && <span className="btn-text"></span>}
       {position === 'right' && buttonIcon}
     </ButtonStyle>
