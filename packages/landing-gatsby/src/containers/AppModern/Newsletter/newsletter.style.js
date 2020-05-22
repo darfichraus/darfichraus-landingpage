@@ -121,6 +121,10 @@ export const ContactFormWrapper = styled.div`
       margin-bottom: 20px;
     }
   }
+
+  button {
+    margin: 10px;
+  }
 `;
 
 export default NewsletterWrapper;
