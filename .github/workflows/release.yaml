@@ -15,12 +15,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build Gatsby Site
-        uses: jzweifel/gatsby-cli-github-action@master
-        env:
-          GATSBY_PROJECT_PATH: "./packages/landing-gatsby"
+      - name: Cache node modules
+        uses: actions/cache@v1
         with:
-          gatsby-arg: build
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Install Dependencies
+        run: yarn install
+      - name: Build  App
+        run: yarn gatsby-build
       - name: Build Docker image
         run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} -f ./packages/landing-gatsby/Dockerfile .
       - name: Build Docker image
