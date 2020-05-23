@@ -1,0 +1,54 @@
+name: Deploy to Staging
+env:
+  NAMESPACE: development
+  REPO: crimsy/landingpage
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  docker:
+    name: Publish to Docker Registry
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Install Dependencies
+        run: yarn install
+      - name: Build  App
+        run: yarn gatsby-build
+      - name: Docker Login
+        run: echo ${{secrets.DOCKER_PASSWORD}} | docker login -u ${{secrets.DOCKER_USERNAME}} --password-stdin
+      - name: Build Docker image
+        run: docker build -t ${REPO}:${GITHUB_RUN_ID} -t ${REPO}:${NAMESPACE} -f ./packages/landing-gatsby/Dockerfile .
+      - name: Publish Docker image
+        run: docker push ${REPO}:${GITHUB_RUN_ID} && docker push ${REPO}:${NAMESPACE}
+  deploy:
+    name: deploy to cluster
+    needs: [docker]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: deploy to cluster
+        uses: docker://nickgronow/kubectl
+        with:
+          config_data: ${{ secrets.KUBE_CONFIG }}
+          args: set image --record deployment/landingpage landingpage=${REPO}:${GITHUB_RUN_ID} -n ${NAMESPACE}
+      - name: verify deployment
+        uses: docker://nickgronow/kubectl
+        with:
+          config_data: ${{ secrets.KUBE_CONFIG }}
+          args: '"rollout status deployment/landingpage -n ${NAMESPACE}"'
+

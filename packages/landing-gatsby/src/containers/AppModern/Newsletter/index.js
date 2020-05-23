@@ -7,8 +7,26 @@ import Button from 'common/src/components/Button';
 import Input from 'common/src/components/Input';
 import Container from 'common/src/components/UI/Container';
 import Image from 'common/src/components/Image';
+import { download } from 'react-icons-kit/fa/download';
+import { instagram } from 'react-icons-kit/fa/instagram';
+import { twitter } from 'react-icons-kit/fa/twitter';
+import { envelope } from 'react-icons-kit/fa/envelope';
+import { Icon } from 'react-icons-kit';
+
 
 import NewsletterWrapper, { ContactFormWrapper } from './newsletter.style';
+
+const openMail = () => {
+  window.location = 'mailto:DarfIchRaus%20Team<info@dafichraus.de>';
+};
+
+const openInstagram = () => {
+  window.location = 'https://instagram.com/darfichraus.de';
+}
+
+const openTwitter = () => {
+  window.location = 'https://twitter.com/darfichraus';
+}
 
 const Newsletter = ({
   sectionWrapper,
@@ -25,15 +43,37 @@ const Newsletter = ({
           <Box {...textArea}>
             <Heading content="Kontakt" {...title} />
             <Text
-              content="Bei Fragen können Sie uns eine Email schreiben oder einen unsere Social Media Kanälen kontaktieren."
+              content="Bei Fragen können Sie uns eine Email schreiben oder einen unserer Social Media Kanäle kontaktieren."
               {...description}
             />
           </Box>
           <Box {...buttonArea}>
             <ContactFormWrapper>
-              <Button {...buttonStyle} title="Email" myLink="mailto:DarfIchRaus%20Team<info@dafichraus.de>" />
+              <Button
+                className="text"
+                variant="textButton"
+                icon={<Icon icon={envelope} />}
+                iconPosition="left"
+                title="Email"
+                onClick={openMail}
+              />
+               <Button
+                className="text"
+                variant="textButton"
+                icon={<Icon icon={instagram} />}
+                iconPosition="left"
+                title="Instagram"
+                onClick={openInstagram}
+              />
+               <Button
+                className="text"
+                variant="textButton"
+                icon={<Icon icon={twitter} />}
+                iconPosition="left"
+                title="Twitter"
+                onClick={openTwitter}
+              />
             </ContactFormWrapper>
-           
           </Box>
           <Box></Box>
         </Container>

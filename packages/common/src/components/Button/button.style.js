@@ -39,7 +39,7 @@ const ButtonStyle = styled.button`
     a:hover {
       text-decoration: none;
     }
-    
+     
     a:active {
       text-decoration: none;
     }
@@ -53,7 +53,9 @@ const ButtonStyle = styled.button`
   }
 
 
-
+  a {
+    text-decoration: none !important;
+  }
 
 
   &:focus {

@@ -11,7 +11,7 @@ import Button from 'common/src/components/Button';
 import Heading from 'common/src/components/Heading';
 import Rating from 'common/src/components/Rating';
 import Container from 'common/src/components/UI/Container';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 
 import BannerWrapper, {
   BannerContent,
@@ -65,6 +65,10 @@ const Banner = () => {
   `);
   const { client } = data.appModernJson;
   // modal handler
+  const handleRedirect = () => {
+    window.location = 'https://app.crimsy.tech';
+  };
+
   const handleVideoModal = () => {
     openModal({
       config: {
@@ -87,22 +91,19 @@ const Banner = () => {
     <BannerWrapper id="home">
       <Container>
         <BannerContent>
-          
           <Fade up delay={100}>
-            <Heading
-              as="h1"
-              content="Ihr neues Krisenkommunikationsportal."
-            />
+            <Heading as="h1" content="Ihr neues Krisenkommunikationsportal." />
           </Fade>
           <Fade up delay={200}>
-            <Text
-              content="Erhalten Sie hier aktuelle, geprüfte Informationen zu wichtigen Neuigkeiten aus Ihrer Region"
-            />
+            <Text content="Erhalten Sie hier aktuelle, geprüfte Informationen zu wichtigen Neuigkeiten aus Ihrer Region" />
           </Fade>
           <Fade up delay={300}>
             <ButtonGroup>
-              <Button className="primary" title="Zur Web App" myLink="https://dev.crimsy.tech"
-/>
+              <Button
+                className="primary"
+                title="Zur Web App"
+                onClick={handleRedirect}
+              />
               <Button
                 className="text"
                 variant="textButton"
@@ -112,7 +113,6 @@ const Banner = () => {
               />
             </ButtonGroup>
           </Fade>
-          
         </BannerContent>
         <BannerImage>
           <Fade up delay={100}>

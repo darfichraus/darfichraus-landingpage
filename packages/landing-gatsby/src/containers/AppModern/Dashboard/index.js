@@ -12,6 +12,10 @@ import DashboardWrapper, { DashboardObject } from './dashboard.style';
 
 import DashboardObject1 from 'common/src/assets/image/appModern/dashboard.png';
 
+const handleRedirect = () => {
+  window.location = 'https://app.crimsy.tech';
+};
+
 const DashboardSection = ({
   row,
   col,
@@ -24,7 +28,7 @@ const DashboardSection = ({
 }) => {
   const ButtonGroup = () => (
     <Fragment>
-      <Button title="Zur Web App"  {...btnStyle} myLink="https://dev.crimsy.tech" />
+      <Button title="Zur Web App" {...btnStyle} onClick={handleRedirect} />
     </Fragment>
   );
   return (
@@ -36,10 +40,7 @@ const DashboardSection = ({
             <Heading className="subtitle" as="h5" content="APP'S DASHBOARD" />
             <FeatureBlock
               title={
-                <Heading
-                  content="Die 'Darf ich raus' Web App"
-                  {...title}
-                />
+                <Heading content="Die 'Darf ich raus' Web App" {...title} />
               }
               description={
                 <Text

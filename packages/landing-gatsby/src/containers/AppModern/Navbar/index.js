@@ -101,6 +101,10 @@ const Navbar = () => {
     });
   };
 
+  const handleRedirect = () => {
+    window.location = 'https://app.crimsy.tech';
+  };
+
   return (
     <NavbarWrapper className="navbar">
       <Container>
@@ -125,7 +129,11 @@ const Navbar = () => {
           {/* end of search */}
 
           <AnchorLink offset={84}>
-            <Button className="trail" title="Zur Web App"/>
+            <Button
+              className="trail"
+              title="Zur Web App"
+              onClick={handleRedirect}
+            />
           </AnchorLink>
 
           <Button
