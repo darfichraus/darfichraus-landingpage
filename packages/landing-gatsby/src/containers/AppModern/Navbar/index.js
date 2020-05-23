@@ -102,7 +102,13 @@ const Navbar = () => {
   };
 
   const handleRedirect = () => {
-    window.location = 'https://app.crimsy.tech';
+    if(window.location.href.includes("darfichraus")) {
+      window.location = "https://webapp.darfichraus.de";
+    }
+    else {
+      //window.location = process.env.DEV_WEBAPP_URL;
+      window.location = "https://app.crimsy.tech";
+    }
   };
 
   return (
