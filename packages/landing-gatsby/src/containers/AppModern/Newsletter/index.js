@@ -75,7 +75,6 @@ const Newsletter = ({
               />
             </ContactFormWrapper>
           </Box>
-          <Box></Box>
         </Container>
       </NewsletterWrapper>
     </Box>
